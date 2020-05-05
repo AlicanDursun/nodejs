@@ -57,6 +57,7 @@ app.get("/api/login", function(req, res) {
 //POST METODU
 app.post("/api/user", function(req, res) {
     var query = "INSERT INTO Login (kullaniciAdi,sifre) VALUES ('" + req.body.kullaniciAdi + "','" + req.body.sifre + "')";
+    console.log(query);
     executeQuery(res, query);
 });
 
