@@ -49,7 +49,7 @@ var executeQuery = function(res, query) {
         });
     }
     //GET METODU
-app.get("/api/login", function(req, res) {
+app.get("/api/users", function(req, res) {
     var query = "Select * from Login";
     executeQuery(res, query);
 });
