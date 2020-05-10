@@ -19,14 +19,14 @@ app.use(function(req, res, next) {
     next();
 });
 
-var veritabaniAyar = {
+var dbConfig = {
     user: "sa",
     password: "j23xmh8v5",
     server: "PLEISTARCHOS",
     database: "FlutterDeneme",
 };
 var executeQuery = function(res, query) {
-        sql.connect(veritabaniAyar, function(err) {
+        sql.connect(dbConfig, function(err) {
             if (err) {
                 console.log("Veri tabanına bağlanırken hata oluştu :- " + err);
                 res.send(err);
